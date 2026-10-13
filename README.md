@@ -38,11 +38,7 @@ AI-Resume-Analyzer/
 
 ## 💻 How to Run the Project
 
-1. Clone the repository:
-
-   ```bash
-   git remote -
-   ```
+1. Clone the repository
 
 2. Open the project folder in VS Code.
 
