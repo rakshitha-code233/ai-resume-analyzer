@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--sidebar-->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">🖥️</div>
+            <div>
+                <h2>AI Resume</h2>
+                <h2>Analyzer</h2>
+            </div>
+        </div>
+        <nav class="navigation">
+            <a href="#" class="nav-item active">
+                <span>🎛️</span>
+                Dashboard
+            </a>
+            <a href="#" class="nav-item">
+                <span>🗎</span>
+                Upload Resume
+            </a>
+            <a href="#" class="nav-item">
+                <span>🔍</span>
+                Analyze Resume
+            </a>
+            <a href="#" class="nav-item">
+                <span>👤</span>
+                Profile
+            </a>
+            <div class="nav-divider"></div>
+            <p class="account-title">ACCOUNT</p>
+            <a href="#" class="nav-item">
+                <span>⏳</span>
+                History
+            </a>
+            <a href="#" class="nav-item">
+                <span>⚙️</span>
+                Settings
+            </a>
+            <a href="#" class="nav-item">
+                <span>🚶‍♂️</span>
+                Logout
+            </a>
+         </nav>
+         <div class="upgrade-card">
+            <div class="rocket">🚀</div>
+            <h3>Upgrade to Pro</h3>
+            <p>Get advanced insights, unlimited
+                scans and priority support.</p>
+            <button>Upgrade Now</button>
+         </div>
+    </aside>
+
+    <!--main content-->
+   <main class="main-content">
+
+    <!--top header -->
+    <header class="top-header">
+        <button class="menu-button">☰</button>
+        <div class="header-right">
+            <span class="moon">🌙</span>
+            <div class="profile-circle">👤</div>
+            <strong>John Doe</strong>
+            <span>^</span>
+        </div>
+    </header>
+
+    <!--Welcome section -->
+    <section class="welcome">
+        <h1>Welcome to the AI Resume Analyzer</h1>
+        <p>Get AI-powered insights to improve your resume and land your dream job!</p>
+    </section>
+
+    <!--STAT CARDS-->
+    <section class="stats-grid">
+        <div class="stat-card">
+            <p>ATS Score</p>
+            <h2 class="green">85%</h2>
+            <span>Good Score</span>
+            <div class="stat-icon green-bg">⚙</div>
+        </div>
+
+        <div class="stat-card">
+            <p>Matched Skills</p>
+            <h2 class="blue">18/24</h2>
+            <span>Skills Matched</span>
+            <div class="stat-icon blue-bg">▤</div>
+        </div>
+
+        <div class="stat-card">
+            <p>Missing Skills</p>
+            <h2 class="orange">6</h2>
+            <span>Important Skills</span>
+            <div class="stat-icon orange-bg">⚠</div>
+        </div>
+
+        <div class="stat-card">
+            <p>Improvement</p>
+            <h2 class="purple">85%</h2>
+            <span>Potential Score</span>
+            <div class="stat-icon purple-bg">↗</div>
+        </div>
+    </section>
+
+    <!--WORKFLOW-->
+    <section class="workflow card">
+        <h2>Resume Analysis Workflow</h2>
+        <p>Complete these simple steps to get your resume analyzed</p>
+        <div class="workflow-steps">
+            <div class="step">
+                <div class="step-icon green-bg">
+                    ↑
+                </div>
+                <h3>1. Upload Resume</h3>
+                <p>
+                    Upload your resume in
+                    PDF, DOCX format
+                </p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="step">
+                <div class="step-icon blue-bg">
+                    ▤
+                </div>
+                <h3>2. Job Description</h3>
+                <p>
+                    Paste the job description
+                    for better analysis
+                </p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="step-icon purple-bg">
+                    ✦
+                </div>
+                <h3>3. Analyze</h3>
+                <p>
+                    Our AI will analyze your
+                    resume and skills
+                </p>
+            </div>
+            <div class="arrow">→</div>
+            <div class="step">
+                <div class="step-icon red-bg">
+                    ▥
+                </div>
+                <h3>4. Get Results</h3>
+                <p>
+                    View detailed report and
+                    improvement tips
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--THREE MAIN CARDS-->
+    <section class="analysis-grid">
+
+        <!--UPLOAD-->
+        <div class="card upload-card">
+            <h2>Upload Your Resume</h2>
+            <p>Supported formats: PDF, DOCX</p>
+            <div class="upload-box">
+                <div class="upload-icon">↑</div>
+                <p>Drag & drop your resume here</p>
+                <span>or</span>
+                <label for="resume">
+                    Choose File
+                </label>
+                <input type="file" id="resume" accept=".pdf,.doc,.docx">
+            </div>
+            <div class="uploaded-file">
+                <div class="pdf-icon">
+                    PDF
+                </div>
+                <div>
+                    <strong>Resume.pdf</strong>
+                    <small>245 KB • Uploaded just now</small>
+                </div>
+                <span class="success">✓</span>
+            </div>
+            <p class="security">
+                🔒 Your data is secure and will not be shared with anyone.
+            </p>
+        </div>
+
+        <!--JOB DESCRIPTION-->
+        <div class="card job-card">
+            <h2>Job Description</h2>
+            <p>Paste the job description below</p>
+            <textarea id="jobDescription" placeholder="Paste the job description here..."></textarea>
+            <button id="analyzeBtn" class="analyze-button">✦ Analyze Resume</button>
+            <div id="analysisMessage"></div>
+            <p id = "charCount">0 characters</P>
+        </div>
+
+        <!--RESULT-->
+        <div class="card result-card">
+            <h2>Analysis Results</h2>
+            <p>Here's how your resume performed</p>
+            <div class="score-circle">
+                <div>
+                    <h2 id="atsScore">90%</h2>
+                    <span>ATS Score</span>
+                </div>
+            </div>
+            <h3 class="score-text">Good Score</h3>
+            <div class="progress-item">
+                <span>skills</span>
+                <div class="progress">
+                    <div id="atsProgress" class="progress-green" style="width: 90%"></div>
+                </div>
+                <span>90%</span>
+            </div>
+
+            <div class="progress-item">
+                <span>Experience</span>
+                <div class="progress ">
+                    <div class="progress-blue"style="width: 80%"></div>
+                </div>
+                <span>80%</span>
+            </div>
+            <div class="progress-item">
+                <span>Education</span>
+                <div class="progress">
+                    <div class="progress-blue" style="width: 85%"></div>
+                </div>
+                <span>85%</span>
+            </div>
+
+            <div class="progress-item">
+                <span>Keywords</span>
+                <div class="progress">
+                    <div class="progress-orange" style="width:75%"></div>
+                </div>
+                <span>75%</span>
+            </div>
+            <div class="progress-item">
+                <span>Formatting</span>
+                <div class="progress">
+                    <div class="progress-green" style="width: 95%"></div>
+                </div>
+                <span>95%</span>
+            </div>
+
+            <button class="report-button">
+                view Detailed Report
+            </button>
+        </div>
+    </section>
+
+    <!--KEY INSIGHTS-->
+    <section class="card insights">
+        <h2>key Insights</h2>
+        <div class="insights-grid">
+            <div class="insight strength">
+                <h3>✓ Strengths</h3>
+                <ul class="miss">
+                    <li>Good technical skills match</li>
+                    <li>Relevant experience found</li>
+                    <li>Well-structured resume</li>
+                </ul>
+            </div>
+
+            <div class="insight improvement">
+                <h3>💡Improvements</h3>
+                <div class="miss" id="aiSuggestions"></div>
+            </div>
+
+            <div class="insight missing">
+                <h3>⚠ Missing Skills</h3>
+                <div class="miss" id="missingSkills"></div>
+            </div>
+        </div>
+    </section>
+   </main>
+   <script src="script.js"></script>
+</body>
+</html>
+
+   
